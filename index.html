@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joshua — Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Joshua, a full-stack web developer building reliable systems with Laravel and Vue.js." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#top" class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        joshua<span class="brand-dot">.dev</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#stack" class="nav-link">Stack</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+        <li><a href="#contact" class="nav-link nav-link--cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-tick"></span>SYS.00 / FULL-STACK DEVELOPER</p>
+          <h1 class="hero-title">
+            I design and build the <em>systems</em> behind the screen.
+          </h1>
+          <p class="hero-sub">
+            Hi, I'm Joshua — a full-stack developer working across
+            <strong>Laravel</strong>, <strong>Vue.js</strong>,
+            <strong>React / Next.js</strong>, and <strong>Node.js</strong>.
+            I build multi-tenant platforms, internal tools, and APIs that stay
+            fast, secure, and maintainable long after launch.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View projects</a>
+            <a href="resume.pdf" download="Joshua-Resume.pdf" class="btn btn-accent">
+              Download resume
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 4v12" /><path d="m6 12 6 6 6-6" /><path d="M5 21h14" />
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-ghost">Get in touch</a>
+          </div>
+          <ul class="hero-meta">
+            <li><span class="status-dot" aria-hidden="true"></span>Available for work</li>
+            <li>Based in the Philippines</li>
+          </ul>
+        </div>
+
+        <!-- Signature: animated system schematic -->
+        <div class="hero-schematic" aria-hidden="true" data-reveal>
+          <svg viewBox="0 0 460 380" fill="none" xmlns="http://www.w3.org/2000/svg" class="schematic">
+            <!-- connection paths -->
+            <path class="wire wire-1" d="M110 70 H 230 V 150" />
+            <path class="wire wire-2" d="M230 210 V 260 H 130" />
+            <path class="wire wire-3" d="M230 210 V 260 H 340" />
+            <path class="wire wire-4" d="M340 290 V 330" />
+            <!-- nodes -->
+            <g class="node" transform="translate(30,40)">
+              <rect width="80" height="56" rx="10" />
+              <text x="40" y="26" class="node-label">CLIENT</text>
+              <text x="40" y="42" class="node-sub">Vue 3 · SPA</text>
+            </g>
+            <g class="node node-core" transform="translate(180,150)">
+              <rect width="100" height="60" rx="10" />
+              <text x="50" y="28" class="node-label">API</text>
+              <text x="50" y="45" class="node-sub">Laravel</text>
+            </g>
+            <g class="node" transform="translate(80,260)">
+              <rect width="100" height="56" rx="10" />
+              <text x="50" y="26" class="node-label">QUEUE</text>
+              <text x="50" y="42" class="node-sub">Jobs · Events</text>
+            </g>
+            <g class="node" transform="translate(290,260)">
+              <rect width="100" height="56" rx="10" />
+              <text x="50" y="26" class="node-label">DATABASE</text>
+              <text x="50" y="42" class="node-sub">MySQL</text>
+            </g>
+            <g class="node node-quiet" transform="translate(300,330)">
+              <rect width="80" height="34" rx="8" />
+              <text x="40" y="22" class="node-sub">backups ✓</text>
+            </g>
+            <!-- moving packets -->
+            <circle class="packet packet-1" r="4" />
+            <circle class="packet packet-2" r="4" />
+            <circle class="packet packet-3" r="4" />
+          </svg>
+          <p class="schematic-caption">FIG. 01 — a typical request, end to end</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="eyebrow" data-reveal><span class="eyebrow-tick"></span>SYS.01 / ABOUT</p>
+        <div class="about-grid">
+
+          <!-- Profile photo — replace the .portrait-placeholder div with:
+               <img src="profile.jpg" alt="Joshua, full-stack developer" class="portrait-img" /> -->
+          <figure class="about-portrait" data-reveal>
+            <div class="portrait-frame">
+              <div class="portrait-placeholder">
+                <svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                  <circle cx="12" cy="8" r="4"/>
+                  <path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/>
+                </svg>
+                <span>IMG.PENDING<br/>profile photo coming soon</span>
+              </div>
+            </div>
+            <figcaption class="portrait-caption">FIG. 02 — Joshua, full-stack developer</figcaption>
+          </figure>
+
+          <div class="about-content">
+            <h2 class="section-title" data-reveal>Reliable software is a design decision.</h2>
+            <div class="about-body" data-reveal>
+              <p>
+                I work across the whole stack — from database schemas and API
+                design to component architecture and pixel-level UI. Most of my
+                recent work involves systems where correctness actually matters:
+                payroll, attendance, role-based access control, and integrations
+                with third-party services.
+              </p>
+              <p>
+                I care about the unglamorous parts: validation, error states,
+                migrations that don't break production, and code the next
+                developer can read without asking me what it does.
+              </p>
+              <dl class="about-facts">
+                <div><dt>Focus</dt><dd>Web platforms &amp; internal tools</dd></div>
+                <div><dt>Backend</dt><dd>Laravel / PHP, Node.js, Express</dd></div>
+                <div><dt>Frontend</dt><dd>Vue 3, React, Next.js, TypeScript</dd></div>
+                <div><dt>Data &amp; workflow</dt><dd>MySQL, PostgreSQL, Jira, Bitbucket</dd></div>
+              </dl>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Stack ===== -->
+    <section class="section section-alt" id="stack">
+      <div class="container">
+        <p class="eyebrow" data-reveal><span class="eyebrow-tick"></span>SYS.02 / STACK</p>
+        <h2 class="section-title" data-reveal>Tools I reach for.</h2>
+
+        <div class="stack-grid">
+          <article class="stack-card" data-reveal>
+            <h3>Backend</h3>
+            <ul>
+              <li>PHP / Laravel</li>
+              <li>Node.js &amp; Express.js</li>
+              <li>REST API design</li>
+              <li>MySQL &amp; PostgreSQL</li>
+              <li>Authentication &amp; RBAC</li>
+            </ul>
+          </article>
+          <article class="stack-card" data-reveal>
+            <h3>Frontend</h3>
+            <ul>
+              <li>Vue 3 (Composition API)</li>
+              <li>React &amp; Next.js</li>
+              <li>TypeScript / JavaScript</li>
+              <li>Pinia, Vue Router, VeeValidate</li>
+              <li>HTML, CSS / SCSS</li>
+            </ul>
+          </article>
+          <article class="stack-card" data-reveal>
+            <h3>Ops &amp; workflow</h3>
+            <ul>
+              <li>Git — GitHub &amp; Bitbucket</li>
+              <li>Jira &amp; agile workflows</li>
+              <li>Netlify deployments</li>
+              <li>API integrations (payments, video)</li>
+              <li>AI-assisted development</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <p class="eyebrow" data-reveal><span class="eyebrow-tick"></span>SYS.03 / SELECTED PROJECTS</p>
+        <h2 class="section-title" data-reveal>Things I've built.</h2>
+
+        <div class="projects-grid">
+
+          <article class="project-card" data-reveal data-project="payroll" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open project details">
+            <div class="project-media" role="img" aria-label="Project screenshot coming soon">
+              <div class="media-placeholder">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="16" rx="2"/>
+                  <circle cx="8.5" cy="9.5" r="1.5"/>
+                  <path d="M21 15l-5-5-9 9"/>
+                </svg>
+                <span>IMG.PENDING — screenshot coming soon</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Payroll &amp; Attendance Platform</h3>
+                <span class="project-tag">Multi-tenant</span>
+              </div>
+              <p>
+                A multi-tenant payroll and attendance management system with
+                role-based access for Owners, Admins, HR, Accountants, and
+                Employees — including camera and geolocation attendance
+                verification and configurable payroll deductions.
+              </p>
+              <ul class="project-stack">
+                <li>Laravel</li><li>Vue 3</li><li>MySQL</li><li>RBAC</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="text-link" aria-disabled="true">Live demo — coming soon</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal data-project="sessionsync" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open project details">
+            <div class="project-media" role="img" aria-label="Project screenshot coming soon">
+              <div class="media-placeholder">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="16" rx="2"/>
+                  <circle cx="8.5" cy="9.5" r="1.5"/>
+                  <path d="M21 15l-5-5-9 9"/>
+                </svg>
+                <span>IMG.PENDING — screenshot coming soon</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>SessionSync-AI</h3>
+                <span class="project-tag">AI tooling</span>
+              </div>
+              <p>
+                A developer tool for keeping AI-assisted coding sessions in
+                sync — capturing context, prompts, and project state so work
+                can continue seamlessly across sessions and machines.
+              </p>
+              <ul class="project-stack">
+                <li>JavaScript</li><li>Node.js</li><li>GitHub</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="text-link" aria-disabled="true">Repository — coming soon</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal data-project="mux-video" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open project details">
+            <div class="project-media" role="img" aria-label="Project screenshot coming soon">
+              <div class="media-placeholder">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="16" rx="2"/>
+                  <circle cx="8.5" cy="9.5" r="1.5"/>
+                  <path d="M21 15l-5-5-9 9"/>
+                </svg>
+                <span>IMG.PENDING — screenshot coming soon</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Video Platform Integration</h3>
+                <span class="project-tag">API integration</span>
+              </div>
+              <p>
+                Integrated the Mux video API into a Laravel application —
+                handling secure uploads, asset processing, and playback, with
+                hardened SSL configuration and reusable HTTP client services.
+              </p>
+              <ul class="project-stack">
+                <li>Laravel</li><li>Mux API</li><li>cURL</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="text-link" aria-disabled="true">Case study — coming soon</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal data-project="netlify-auth" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open project details">
+            <div class="project-media" role="img" aria-label="Project screenshot coming soon">
+              <div class="media-placeholder">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="16" rx="2"/>
+                  <circle cx="8.5" cy="9.5" r="1.5"/>
+                  <path d="M21 15l-5-5-9 9"/>
+                </svg>
+                <span>IMG.PENDING — screenshot coming soon</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Static Site &amp; Auth Flow</h3>
+                <span class="project-tag">Deployment</span>
+              </div>
+              <p>
+                Diagnosed and rebuilt a Netlify-hosted application's login
+                flow — fixing redirect rules, environment configuration, and
+                serverless storage issues to get authentication working
+                reliably in production.
+              </p>
+              <ul class="project-stack">
+                <li>Netlify</li><li>JavaScript</li><li>Serverless</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="text-link" aria-disabled="true">Details — coming soon</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal data-project="react-app" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open project details">
+            <div class="project-media" role="img" aria-label="Project screenshot coming soon">
+              <div class="media-placeholder">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="16" rx="2"/>
+                  <circle cx="8.5" cy="9.5" r="1.5"/>
+                  <path d="M21 15l-5-5-9 9"/>
+                </svg>
+                <span>IMG.PENDING — screenshot coming soon</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>React Web Application</h3>
+                <span class="project-tag">React</span>
+              </div>
+              <p>
+                A single-page application built with React — component-driven
+                UI, client-side routing, and API integration with a Node.js
+                and Express backend.
+                <!-- TODO: replace with your project's real name & description -->
+              </p>
+              <ul class="project-stack">
+                <li>React</li><li>Node.js</li><li>Express</li><li>PostgreSQL</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="text-link" aria-disabled="true">Live demo — coming soon</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal data-project="nextjs-app" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open project details">
+            <div class="project-media" role="img" aria-label="Project screenshot coming soon">
+              <div class="media-placeholder">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="16" rx="2"/>
+                  <circle cx="8.5" cy="9.5" r="1.5"/>
+                  <path d="M21 15l-5-5-9 9"/>
+                </svg>
+                <span>IMG.PENDING — screenshot coming soon</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Next.js Web Application</h3>
+                <span class="project-tag">Next.js</span>
+              </div>
+              <p>
+                A full-stack application built with Next.js — server-side
+                rendering for fast loads and SEO, API routes for backend
+                logic, and a PostgreSQL data layer.
+                <!-- TODO: replace with your project's real name & description -->
+              </p>
+              <ul class="project-stack">
+                <li>Next.js</li><li>React</li><li>PostgreSQL</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="text-link" aria-disabled="true">Live demo — coming soon</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Process ===== -->
+    <section class="section section-alt" id="process">
+      <div class="container">
+        <p class="eyebrow" data-reveal><span class="eyebrow-tick"></span>SYS.04 / HOW I WORK</p>
+        <h2 class="section-title" data-reveal>From requirement to running system.</h2>
+
+        <ol class="process-list">
+          <li class="process-step" data-reveal>
+            <span class="step-index">STEP 01</span>
+            <h3>Understand the domain</h3>
+            <p>Payroll rules, attendance policies, user roles — I map the real-world logic before writing a line of code.</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <span class="step-index">STEP 02</span>
+            <h3>Design the data</h3>
+            <p>Schemas, relationships, and access control designed up front so features don't fight the database later.</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <span class="step-index">STEP 03</span>
+            <h3>Build in vertical slices</h3>
+            <p>Working end-to-end features early — API, UI, and validation together — so feedback comes fast.</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <span class="step-index">STEP 04</span>
+            <h3>Harden and ship</h3>
+            <p>Error handling, edge cases, deployment configuration, and the boring details that make software trustworthy.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section" id="contact">
+      <div class="container contact-wrap" data-reveal>
+        <p class="eyebrow"><span class="eyebrow-tick"></span>SYS.05 / CONTACT</p>
+        <h2 class="section-title">Let's build something that lasts.</h2>
+        <p class="contact-sub">
+          Have a project in mind, or a system that needs a developer who
+          sweats the details? I'd love to hear about it.
+        </p>
+        <div class="contact-actions">
+          <a href="mailto:hello@example.com" class="btn btn-primary">hello@example.com</a>
+          <a href="resume.pdf" download="Joshua-Resume.pdf" class="btn btn-accent">Download resume</a>
+          <a href="https://github.com/" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Joshua — built by hand with HTML, CSS &amp; JavaScript.</p>
+      <a href="#top" class="text-link">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- ===== Project modal ===== -->
+  <div class="modal" id="project-modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" data-close aria-label="Close project details">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+
+      <div class="carousel" aria-roledescription="carousel" aria-label="Project screenshots">
+        <div class="carousel-viewport">
+          <div class="carousel-track"><!-- slides injected by script.js --></div>
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous image">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+        </button>
+        <button class="carousel-btn carousel-next" aria-label="Next image">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+        <div class="carousel-footer">
+          <div class="carousel-dots" role="tablist" aria-label="Choose image"></div>
+          <span class="carousel-counter" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="project-head">
+          <h3 id="modal-title"></h3>
+          <span class="project-tag modal-tag"></span>
+        </div>
+        <p class="modal-desc"></p>
+        <ul class="project-stack modal-stack"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
