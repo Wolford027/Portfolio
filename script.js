@@ -18,111 +18,70 @@
      Slides with src: null render as styled placeholders.
      ======================================================================== */
   const PROJECTS = {
-    "payroll": {
-      title: "Payroll & Attendance Platform",
-      tag: "Multi-tenant",
-      description:
-        "A multi-tenant payroll and attendance management system built for " +
-        "companies with layered responsibilities. Role-based access control " +
-        "separates what Owners, Admins, HR, Accountants, and Employees can " +
-        "see and do. Attendance is verified through camera capture and " +
-        "geolocation, while payroll supports configurable deductions, " +
-        "contributions, and pay schedules — all computed server-side so the " +
-        "numbers are always consistent.",
-      stack: ["Laravel", "Vue 3", "MySQL", "RBAC"],
-      slides: [
-        { src: null, caption: "Dashboard overview" },
-        { src: null, caption: "Attendance — camera & geolocation check-in" },
-        { src: null, caption: "Payroll run with configurable deductions" },
-        { src: null, caption: "Role & permission management" },
-        { src: null, caption: "Employee self-service portal" }
+    "apbs": {
+      "title": "APBS — AttendeePay Business Suite",
+      "tag": "Payroll & HR",
+      "description": "AttendeePay Business Suite (APBS) brings employee records, RFID attendance, leave management, and payroll together. It supports earnings, deductions, Philippine statutory contributions, payroll cycles, payslips, reports, and an audit trail. These interface screenshots use sample data.",
+      "stack": [
+        "React",
+        "Express",
+        "MySQL",
+        "Material UI"
+      ],
+      "slides": [
+        {
+          "src": "assets/projects/apbs/01-dashboard.webp",
+          "caption": "Workforce dashboard"
+        },
+        {
+          "src": "assets/projects/apbs/02-employees.webp",
+          "caption": "Employee directory"
+        },
+        {
+          "src": "assets/projects/apbs/03-attendance.webp",
+          "caption": "Attendance records"
+        },
+        {
+          "src": "assets/projects/apbs/04-payroll.webp",
+          "caption": "Payroll runs"
+        },
+        {
+          "src": "assets/projects/apbs/05-overview.webp",
+          "caption": "Product overview"
+        }
       ]
     },
-    "sessionsync": {
-      title: "SessionSync-AI",
-      tag: "AI tooling",
-      description:
-        "A developer tool for keeping AI-assisted coding sessions in sync. " +
-        "It captures project context, prompts, and session state so that " +
-        "work can continue seamlessly across sessions and machines — no " +
-        "more re-explaining the codebase every time a new session starts.",
-      stack: ["JavaScript", "Node.js", "GitHub"],
-      slides: [
-        { src: null, caption: "Session overview" },
-        { src: null, caption: "Context capture in action" },
-        { src: null, caption: "Prompt history & search" },
-        { src: null, caption: "Sync across machines" },
-        { src: null, caption: "Settings & configuration" }
-      ]
-    },
-    "mux-video": {
-      title: "Video Platform Integration",
-      tag: "API integration",
-      description:
-        "Integration of the Mux video API into a Laravel application — " +
-        "secure uploads, asset processing, and playback. The work included " +
-        "hardening SSL certificate verification for outbound API calls and " +
-        "refactoring the HTTP client options into reusable service methods " +
-        "so every integration point behaves consistently.",
-      stack: ["Laravel", "Mux API", "cURL"],
-      slides: [
-        { src: null, caption: "Video upload flow" },
-        { src: null, caption: "Asset processing status" },
-        { src: null, caption: "Playback page" },
-        { src: null, caption: "API service layer (code)" },
-        { src: null, caption: "Error handling & retries" }
-      ]
-    },
-    "netlify-auth": {
-      title: "Static Site & Auth Flow",
-      tag: "Deployment",
-      description:
-        "Diagnosis and rebuild of a Netlify-hosted application's login " +
-        "flow. Root causes included missing redirect rules in netlify.toml " +
-        "and serverless storage misconfiguration. The fix covered redirect " +
-        "rules, environment configuration, and storage handling to get " +
-        "authentication working reliably in production.",
-      stack: ["Netlify", "JavaScript", "Serverless"],
-      slides: [
-        { src: null, caption: "Login screen" },
-        { src: null, caption: "Redirect rules configuration" },
-        { src: null, caption: "Environment settings" },
-        { src: null, caption: "Deploy pipeline" },
-        { src: null, caption: "Working auth flow" }
-      ]
-    },
-    "react-app": {
-      title: "React Web Application",
-      tag: "React",
-      description:
-        "A single-page application built with React — component-driven UI, " +
-        "client-side routing, and API integration with a Node.js and " +
-        "Express backend on PostgreSQL. " +
-        "(Replace this with your project's real name and description.)",
-      stack: ["React", "Node.js", "Express", "PostgreSQL"],
-      slides: [
-        { src: null, caption: "Home / landing view" },
-        { src: null, caption: "Main feature screen" },
-        { src: null, caption: "Data list & filtering" },
-        { src: null, caption: "Detail view" },
-        { src: null, caption: "Mobile layout" }
-      ]
-    },
-    "nextjs-app": {
-      title: "Next.js Web Application",
-      tag: "Next.js",
-      description:
-        "A full-stack application built with Next.js — server-side " +
-        "rendering for fast loads and SEO, API routes for backend logic, " +
-        "and a PostgreSQL data layer. " +
-        "(Replace this with your project's real name and description.)",
-      stack: ["Next.js", "React", "PostgreSQL"],
-      slides: [
-        { src: null, caption: "Home / landing view" },
-        { src: null, caption: "Server-rendered content page" },
-        { src: null, caption: "Dashboard" },
-        { src: null, caption: "API-backed feature" },
-        { src: null, caption: "Mobile layout" }
+    "signoff": {
+      "title": "Signoff",
+      "tag": "QA & releases",
+      "description": "Signoff helps small teams organize test suites and prioritized test cases, run checks with pass, fail, or blocked results, and connect failures to Jira or GitHub tickets. It includes AI-assisted test-case drafts from a specification or code diff and shareable release reports. These interface previews use sample data.",
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "PostgreSQL"
+      ],
+      "slides": [
+        {
+          "src": "assets/projects/signoff/01-overview.webp",
+          "caption": "Product overview"
+        },
+        {
+          "src": "assets/projects/signoff/02-suites.webp",
+          "caption": "Test suites"
+        },
+        {
+          "src": "assets/projects/signoff/03-test-cases.webp",
+          "caption": "Prioritized test cases"
+        },
+        {
+          "src": "assets/projects/signoff/04-test-run.webp",
+          "caption": "Test execution"
+        },
+        {
+          "src": "assets/projects/signoff/05-release-report.webp",
+          "caption": "Release report"
+        }
       ]
     }
   };
@@ -267,6 +226,7 @@
     if (!project) return;
 
     lastFocused = triggerEl || document.activeElement;
+    modal.dataset.project = projectId;
 
     // Populate text
     titleEl.textContent = project.title;
@@ -326,6 +286,7 @@
       openModal(card.dataset.project, card);
     });
     card.addEventListener("keydown", (event) => {
+      if (event.target.closest("a[href]:not([aria-disabled='true'])")) return;
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
         openModal(card.dataset.project, card);
